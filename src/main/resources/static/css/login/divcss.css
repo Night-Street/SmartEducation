@@ -1,0 +1,72 @@
+/*div{
+	border:1px solid black;
+}*/
+.login-form {
+	animation-name: blink;
+	animation-duration: 0.7s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	height: 400px;
+	width: 420px;
+	position:relative;
+	margin: auto;
+	background: #fff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	filter: opacity(87%);
+	box-shadow: 0 0 10px 0 #EAEAEA;
+	opacity: 0.87;
+}
+
+.header {
+	height: 150px;
+}
+
+.styled-input {
+	margin-left: 80px;
+	width: 50%;
+}
+
+.styled-input span {
+	position: relative;
+
+	/*left:50px;*/
+}
+
+.button {
+	margin-left: 15px;
+	margin-top: 30px;
+}
+
+.bottom {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: -2;
+	background-size: 100% 100%;
+}
+
+.Select {
+	/*display: flex;*/
+	width: 270px;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: 4px 2px 5px 3px #ccc;
+	position: relative;
+	/*margin-left: 32px;*/
+}
+
+.title_form {
+	position: relative;
+	right: 60px;
+	top: 10px;
+}
+@keyframes blink{
+	100% {
+		box-shadow: 0 0 20px 10px #EAEAEA;
+	}
+}

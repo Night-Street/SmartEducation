@@ -1,0 +1,78 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="css/login/style.css" type="text/css" rel="stylesheet">
+    <link href="css/login/divcss.css" type="text/css" rel="stylesheet">
+    <link href="css/login/background.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="bottom">
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div class="header"></div>
+<div class="mainbody">
+    <div class="container">
+        <div class="login-form">
+            <div class="styled-input">
+                <div class="title_form">
+                    <p id="login_title">Login</p>
+                </div>
+                <form action="/login/" method="post">
+                    <span class="input input_BUT">
+                        <input name="id" class="input_field input_fieldBUT" type="text" id="input-1"
+                               placeholder="Input your id" required="required"/>
+                        <label class="input_label input_labelBUT" for="input-1">
+                            <span class="input_label-content input_label-content_BUT">Username</span>
+                        </label>
+                    </span>
+                    <span class="input input_BUT">
+							<input name="password" class="input_field input_fieldBUT" type="password" id="input-2"
+                                   placeholder="Input your password" required="required"/>
+							<label class="input_label input_labelBUT" for="input-2">
+								<span class="input_label-content input_label-content_BUT">Password</span>
+							</label>
+						</span>
+                    <div class="Select">
+                        <select name="role" id="Se" required="required">
+                            <option value="">Please select your role...</option>
+                            <option value="0">Student</option>
+                            <option value="1">Teacher</option>
+                            <option value="2">Administrator</option>
+                        </select>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Login" id="Sub"/>
+                        <input type="reset" value="Reset" id="Reset"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>supported by Cheng Chen (Jiangsu Normal University 1032012126061)</p>
+</div>
+</body>
+</html>
