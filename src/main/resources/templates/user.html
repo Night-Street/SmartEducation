@@ -1,0 +1,77 @@
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="css/list/background.css">
+		<link type="text/css" rel="stylesheet" href="css/list/frames.css">
+		<link type="text/css" rel="stylesheet" href="css/list/components.css">
+		<script type="text/javascript" src="<c:url value='/js/jquery-1.8.3.js'/>" ></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				$("#create").focus(function(){
+					$("#create").val("");
+				});
+			})
+			
+		</script>
+		<title></title>
+		<!--<style>
+			#form1{
+				display: inline;
+				margin-left: 30px;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			li {display:block; width:1000px; height:40px; 
+				border:1px solid red; line-height: 40px; border-radius: 13px;
+				margin-bottom: 30px;}
+			li a { margin-left: 30px;}
+		</style>-->
+	</head>
+
+	<body>
+		<div class="bottom">
+			<div class="background">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="header">
+			<a href="<c:url value='/admin.do'/>">
+				<input type="button" value="后台登陆" class="squarebutton" id="create"/>
+			</a>
+			<form id="form1" action="<c:url value='/findTitle.do'/>" method="post">
+				<span class="textfield">
+					<input id="title" name="titleName" type="text" value="${condition}" />
+				</span>
+				<input type="submit" value="搜索" class="button" id="search"/>
+			</form>
+		</div>
+		
+		<hr />
+		
+		<ul class="mainbody">
+			<a><h2 align="center"><font color="#00bfff">SuperHero在线投票系统</font></h2></a>
+			<c:forEach items="${ titles}" var="title">
+				<li style=";" >
+					<a href="<c:url value='toVoteUser.do?tid=${title.id}'/>">${title.name }</a>
+					<div align="right">
+					<br/>
+					</div>
+				</li>
+			</c:forEach>
+		</ul>
+	</body>
+</html>

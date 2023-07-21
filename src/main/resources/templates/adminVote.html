@@ -1,0 +1,49 @@
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<link type="text/css" rel="stylesheet" href="css/vote/background.css">
+		<link type="text/css" rel="stylesheet" href="css/vote/frames.css">
+		<link type="text/css" rel="stylesheet" href="css/vote/components.css">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="bottom">
+			<div class="background">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="header"></div>
+		<div class="mainbody">
+			<div class="titlepane">
+				<span>投票</span>
+			</div>
+			<form action="<c:url value='/adminVote.do'/>">
+				<div class="optionpane">
+					<c:forEach items="${options }" var="option">
+						<span class="option">
+							<input type="radio" name="id" value="${option.id }" id="${option.id }" class="radio"/>
+							<label for="${option.id }" class="optionlabel">${option.name }</label>
+						</span>
+						<br/>
+					</c:forEach>
+				</div>
+				<div class="buttonpane">
+					<input type="submit" value="确定" class="button" id="sub"/>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

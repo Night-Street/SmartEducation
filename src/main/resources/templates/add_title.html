@@ -1,0 +1,72 @@
+<html lang="zh-cn">
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/add_title/background.css">
+		<link type="text/css" rel="stylesheet" href="css/add_title/frames.css">
+		<link type="text/css" rel="stylesheet" href="css/add_title/components.css">
+		
+		<meta charset="UTF-8">
+		<title>创建投票标题</title>
+
+		<!--<script>
+			$(function() {
+				$("#add_title").click(function(){
+					var title = $("#title").val();
+					var tid = $("#tid").val();
+					if(title==""){
+						alert('标题不能为空!');
+						return false;
+					}
+					$("#form1").submit();
+					
+				});
+			});
+		</script>-->
+	</head>
+
+	<body>
+		<div class="bottom">
+			<div class="background">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<!--<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>-->
+			</div>
+		</div>
+		<div class="header"></div>
+		<div class="mainbody">
+			<div class="titlepane">
+				<span>创建您的投票问卷</span>
+			</div>
+			<form id="form1" action="<c:url value='/addTitle.do'/>">
+				<div class="textfield">
+					<span>投票名称</span>
+					<input id="title" name="titleName" placeholder="您想发布的投票内容是？" required="required"/><br/>
+				</div>
+				<div class="textfield">
+					<span>投票ID&nbsp&nbsp&nbsp</span>
+					<input id="tid" name="titleId" placeholder="给您的投票主题想一个幸运数字吧！" required="required"/><br/>
+				</div>
+				<div class="buttonpane">
+					<input type="submit" value="立即创建" id="add_title" class="button"/>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>
