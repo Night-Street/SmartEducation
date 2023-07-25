@@ -3,7 +3,6 @@ package com.example.smarteducation.dao;
 import com.example.smarteducation.entity.Admin;
 import com.example.smarteducation.entity.Student;
 import com.example.smarteducation.entity.Teacher;
-import com.example.smarteducation.entity.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -11,9 +10,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
     @Select(
-            "SELECT id FROM user WHERE id=#{id} AND password=#{password} AND role=#{role}"
+            "SELECT id FROM user WHERE id=#{id} AND pwd=#{pwd} AND role=#{role}"
     )
-    String queryIdByIdPasswordRole(@Param("id") String id, @Param("password") int password, @Param("role") int role);
+    String queryIdByIdPwdRole(@Param("id") String id, @Param("pwd") int pwd, @Param("role") int role);
 
     @Select(
             "SELECT id, name, sex FROM student WHERE id=#{id}"

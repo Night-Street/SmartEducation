@@ -9,10 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.io.IOException;
 
 @Controller
 //@RestController
@@ -30,11 +27,11 @@ public class LoginController {
             @RequestParam("id") String id
             , @RequestParam("password") String strPassword
             , @RequestParam("role") int role
-            , HttpServletRequest request
-            , HttpServletResponse response
+//            , HttpServletRequest request
+//            , HttpServletResponse response
     ) {
         int codePassword = strPassword.hashCode();
-        id = userDao.queryIdByIdPasswordRole(id, codePassword, role);
+        id = userDao.queryIdByIdPwdRole(id, codePassword, role);
         if (id == null) {
             return new ModelAndView("login");
         }
