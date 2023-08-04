@@ -1,0 +1,86 @@
+.titlepane{
+	height: 80px;
+	top: 20px;
+	position: relative;
+	text-align: center;
+}
+.titlepane span{
+	animation-name: changeFontColor;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-timing-function: linaer;
+	font-size: 37;
+	font-family: 华文行楷, 华文新魏, 黑体, 宋体;
+}
+@keyframes changeFontColor{
+	0%{
+		color: red;
+	}
+	20%{
+		color: orange;
+	}
+	40%{
+		color: green;
+	}
+	60%{
+		color: blue;
+	}
+	80%{
+		color: purple;
+	}
+	100%{
+		color: red;
+	}
+}
+.optionpane{
+	margin-top: 20px;
+	text-align: center;
+}
+.option *{
+	cursor: pointer;
+}
+.option{
+	transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+}
+.option label{
+	border-radius: 5px;
+}
+.option:hover{
+	color: #1f6ebd;
+}
+.buttonpane{
+	margin-top: 20px;
+}
+.button{
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	font-size: 15;
+	transition: margin-left 0.7s, margin-right 0.7s, margin-top 0.7s, margin-bottom 0.7s, background-color 0.7s, font-size 0.7s, width 0.7s, height 0.7s;
+	-o-transition: margin-left 0.7s, margin-right 0.7s, margin-top 0.7s, margin-bottom 0.7s, background-color 0.7s, font-size 0.7s, width 0.7s, height 0.7s;
+	-webkit-transition: margin-left 0.7s, margin-right 0.7s, margin-top 0.7s, margin-bottom 0.7s, background-color 0.7s, font-size 0.7s, width 0.7s, height 0.7s;
+	-moz-transition: margin-left 0.7s, margin-right 0.7s, margin-top 0.7s, margin-bottom 0.7s, background-color 0.7s, font-size 0.7s, width 0.7s, height 0.7s;
+	border: none;
+	text-align: center;
+	background-color: #0558fa;
+	cursor: pointer;
+	box-shadow: 5px 3px 6px 6px #b4c2d0;
+	color: white;
+	border-radius: 5px;
+}
+.button:hover{
+	width: 100px;
+	height: 50px;
+	background-color: #508afb;
+	font-size: 18;
+}
+#sub{
+	margin-left: 210px;
+}
+#sub:hover{
+	margin-left: 200px;
+	margin-top: -5px;
+}
