@@ -1,9 +1,9 @@
-package com.example.smarteducation.entity;
+package com.example.login.entity;
 
 public class User {
     private String id;
     private String name;
-    //    0表示女性，1表示男性
+//    0表示女性，1表示男性
     private int sex;
 
     public int getSex() {
@@ -18,9 +18,6 @@ public class User {
         this.id = id;
         this.name = name;
         this.sex = sex;
-    }
-
-    public User() {
     }
 
     public String getName() {
